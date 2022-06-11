@@ -1,5 +1,7 @@
 package br.dev.multicode.mcassessments.entities;
 
+import br.dev.multicode.mcassessments.api.http.requests.AssessmentRequest;
+import br.dev.multicode.mcassessments.api.http.responses.AssessmentResponse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -40,4 +42,21 @@ public class Assessment {
   @UpdateTimestamp
   private ZonedDateTime updatedAt;
 
+  public static Assessment of(final AssessmentRequest postAssessmentRequest) {
+    return Assessment.builder()
+      .productId(postAssessmentRequest.getProductId().toString())
+      .userId(postAssessmentRequest.getUserId().toString())
+      .assessment(postAssessmentRequest.getAssessment())
+      .description(postAssessmentRequest.getDescription())
+      .build();
+  }
+
+  public AssessmentResponse toResponse() {
+    return AssessmentResponse.builder()
+      .productId(productId)
+      .userId(userId)
+      .assessment(assessment)
+      .description(description)
+      .build();
+  }
 }
