@@ -1,0 +1,70 @@
+databaseChangeLog:
+  - changeSet:
+      id: V002
+      labels: "inserts_assessments"
+      author: "andre.dev.linux@gmail.com"
+      comment: "Inserts into table assessments"
+      changes:
+        - insert:
+            tableName: assessments
+            catalogName: assessments
+            dbms: 'postgresql'
+            schemaName: public
+            columns:
+              - column:
+                  name: assessment_id
+                  value: "402880e9815321510181532373920000"
+              - column:
+                  name: product_id
+                  value: "bceece8d-9212-4ab8-aa03-95f0a7cf4e9a"
+              - column:
+                  name: user_id
+                  value: "eafeaa96-9e55-41a9-bd9c-8044efc4bfc8"
+              - column:
+                  name: assessment
+                  value: 5
+              - column:
+                  name: description
+                  value: "Muito satisfeito, qualidade absurda."
+        - insert:
+            tableName: assessments
+            catalogName: assessments
+            dbms: 'postgresql'
+            schemaName: public
+            columns:
+              - column:
+                  name: assessment_id
+                  value: "402880e98153215101815329794d0001"
+              - column:
+                  name: product_id
+                  value: "bceece8d-9212-4ab8-aa03-95f0a7cf4e9a"
+              - column:
+                  name: user_id
+                  value: "372a4c33-e08c-4f3f-96e2-c4dfa6bfb188"
+              - column:
+                  name: assessment
+                  value: 4
+              - column:
+                  name: description
+                  value: "Muito bom."
+        - insert:
+            tableName: assessments
+            catalogName: assessments
+            dbms: 'postgresql'
+            schemaName: public
+            columns:
+              - column:
+                  name: assessment_id
+                  value: "402880e98153215101815329de470002"
+              - column:
+                  name: product_id
+                  value: "bceece8d-9212-4ab8-aa03-95f0a7cf4e9a"
+              - column:
+                  name: user_id
+                  value: "811c15c4-9d78-41e4-b5f5-0d2764b3960a"
+              - column:
+                  name: assessment
+                  value: 5
+              - column:
+                  name: description
+                  value: "Muito boa relação custo beneficio."

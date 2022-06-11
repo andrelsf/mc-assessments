@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
       file: liquibase/migrations/V001-CREATE-TABLE-ASSESSMENTS.yml
+  - include:
+      file: liquibase/migrations/V002-INSERTS-INTO-TABLE-ASSESSMENTS.yml
