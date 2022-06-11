@@ -11,11 +11,16 @@ databaseChangeLog:
             tableName: assessments
             columns:
               - column:
-                  name: product_id
+                  name: assessment_id
                   type: VARCHAR(37)
                   autoIncrement: false
                   constraints:
                     primaryKey: true
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: VARCHAR(37)
+                  constraints:
                     nullable: false
               - column:
                   name: user_id
