@@ -14,9 +14,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @RestController
-@RequestMapping(value = "/assessments",
-  consumes = MediaType.APPLICATION_JSON_VALUE,
-  produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/assessments")
 @RequiredArgsConstructor
 public class AssessmentResource {
 
