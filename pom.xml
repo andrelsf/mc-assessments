@@ -10,9 +10,9 @@
   </parent>
 
   <groupId>br.dev.multicode</groupId>
-  <artifactId>mc-assessments</artifactId>
+  <artifactId>mc-assessmentResponses</artifactId>
   <version>1.0.0</version>
-  <name>mc-assessments</name>
+  <name>mc-assessmentResponses</name>
   <description>Manager Assessments</description>
 
   <properties>
@@ -36,6 +36,19 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-undertow</artifactId>
+    </dependency>
+
+    <!-- Resilience4J - Circuit Breaker Impl -->
+    <dependency>
+      <groupId>io.github.resilience4j</groupId>
+      <artifactId>resilience4j-spring-boot2</artifactId>
+      <version>1.7.1</version>
+    </dependency>
+
+    <!-- AOP - Dependencia necessaria os Resilience4J -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aop</artifactId>
     </dependency>
 
     <!-- Actuator -->

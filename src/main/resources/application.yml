@@ -36,6 +36,16 @@ spring:
     password: ${spring.datasource.password}
     driver-class-name: ${spring.datasource.driver-class-name}
 
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      registerHealthIndicator: true
+
 logging:
   level:
     root: ${LOGGING_LEVEL_ROOT:INFO}
